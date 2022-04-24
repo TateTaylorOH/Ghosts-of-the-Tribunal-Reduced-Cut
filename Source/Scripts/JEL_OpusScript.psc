@@ -13,6 +13,7 @@ IF Opus.IsDisabled()
 		PlayerRef.RemoveItem(OpusBook)
 		Opus.Enable()
 		OpusLectern.Disable()
+		Utility.Wait(1)
 		JEL_CliffRacerScreech.play(self) 
 	ENDIF
 ELSEIF Opus.IsEnabled()
