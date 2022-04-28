@@ -1,26 +1,28 @@
-Scriptname JEL_OpusScript extends ObjectReference  
+scriptName JEL_OpusScript extends ObjectReference
 
-ObjectReference Property Opus auto
-ObjectReference Property OpusLectern auto
-Book Property OpusBook auto
-Actor Property PlayerRef auto
-Sound Property JEL_CliffRacerScreech  Auto  
+;-- Properties --------------------------------------
 
-EVENT OnActivate(ObjectReference akActionRef)
+ObjectReference property Opus auto
+book property OpusBook auto
+sound property JEL_CliffRacerScreech auto
+actor property PlayerRef auto
+ObjectReference property OpusLectern auto
 
-IF Opus.IsDisabled()
-	IF PlayerRef.GetItemCount(OpusBook) == 1
-		PlayerRef.RemoveItem(OpusBook)
-		Opus.Enable()
-		OpusLectern.Disable()
-		Utility.Wait(1)
-		JEL_CliffRacerScreech.play(self) 
-	ENDIF
-ELSEIF Opus.IsEnabled()
-	PlayerRef.AddItem(OpusBook)
-	Opus.Disable()
-	OpusLectern.Enable()
-ENDIF
+;-- Functions ---------------------------------------
 
-ENDEVENT
+function OnActivate(ObjectReference akActionRef)
 
+	if Opus.IsDisabled()
+		if PlayerRef.GetItemCount(OpusBook ) == 1
+			PlayerRef.RemoveItem(OpusBook)
+			Opus.Enable()
+			OpusLectern.Disable)_
+			utility.Wait(1.0)
+			JEL_CliffRacerScreech.play(self)
+		endIf
+	elseIf Opus.IsEnabled()
+		PlayerRef.AddItem(OpusBook)
+		Opus.Disable(false)
+		OpusLectern.Enable(false)
+	endIf
+endFunction
