@@ -31,14 +31,11 @@ EVENT OnLoad()
 	GRC_Relics.AddForm(GRC_Trueflame, 1, 1)
 
 	GRC_Artifacts.AddForm(GRC_Cleaver, 1, 1)
-	debug.notification("Cleaver injected.")
 	GRC_Artifacts.AddForm(GRC_HerHandArmor, 1, 1)
 	GRC_Artifacts.AddForm(GRC_HerHandHead, 1, 1)
 	GRC_Artifacts.AddForm(GRC_HerHandGloves, 1, 1)
 	GRC_Artifacts.AddForm(GRC_HerHandBoots, 1, 1)
-	debug.notification("Armor injected.")
 
 	GRC_AddFormQuest.Stop()
-	debug.notification("Quest stopped.")
 
 ENDEVENT
