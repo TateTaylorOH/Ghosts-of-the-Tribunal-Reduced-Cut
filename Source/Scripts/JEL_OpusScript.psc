@@ -16,8 +16,8 @@ function OnActivate(ObjectReference akActionRef)
 		if PlayerRef.GetItemCount(OpusBook ) == 1
 			PlayerRef.RemoveItem(OpusBook)
 			Opus.Enable()
-			OpusLectern.Disable)_
-			utility.Wait(1.0)
+			OpusLectern.Disable()
+			utility.Wait(0.5)
 			JEL_CliffRacerScreech.play(self)
 		endIf
 	elseIf Opus.IsEnabled()
